@@ -1,1 +1,9 @@
-sakit.xcodeproj/xcuserdata
+/*.lnk
+/*.mk
+/*.ncb
+/*.opensdf
+/*.sdf
+/*.suo
+/*.user
+/Generated Files
+/bin
