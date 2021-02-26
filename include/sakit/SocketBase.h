@@ -41,7 +41,7 @@ namespace sakit
 		unsigned short remotePort;
 
 		virtual int _send(hstream* stream, int count) = 0;
-		virtual int _send(chstr data);
+		int _send(chstr data);
 
 		virtual void _activateConnection(Host remoteHost, unsigned short remotePort, Host localHost, unsigned short localPort);
 
