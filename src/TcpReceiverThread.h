@@ -37,7 +37,7 @@ namespace sakit
 		hstream* stream;
 		hmutex streamMutex;
 
-		void _updateProcess();
+		void _updateProcess() override;
 
 	};
 

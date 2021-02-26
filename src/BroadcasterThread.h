@@ -38,7 +38,7 @@ namespace sakit
 		harray<NetworkAdapter> adapters;
 		unsigned short remotePort;
 
-		void _updateProcess();
+		void _updateProcess() override;
 
 	};
 

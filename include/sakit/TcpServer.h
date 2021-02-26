@@ -31,7 +31,7 @@ namespace sakit
 
 		harray<TcpSocket*> getSockets();
 
-		void update(float timeDelta = 0.0f);
+		void update(float timeDelta = 0.0f) override;
 
 		TcpSocket* accept();
 

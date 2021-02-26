@@ -43,7 +43,7 @@ namespace sakit
 		void _updateConnect();
 		void _updateSend();
 		void _updateReceive();
-		void _updateProcess();
+		void _updateProcess() override;
 
 	};
 

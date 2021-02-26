@@ -40,7 +40,7 @@ namespace sakit
 		bool setMulticastTtl(int value);
 		bool setMulticastLoopback(bool value);
 
-		void update(float timeDelta = 0.0f);
+		void update(float timeDelta = 0.0f) override;
 
 		bool setDestination(Host remoteHost, unsigned short remotePort);
 
@@ -67,9 +67,9 @@ namespace sakit
 		BroadcasterThread* broadcaster;
 		harray<std::pair<Host, Host> > multicastHosts;
 
-		void _updateReceiving();
+		void _updateReceiving() override;
 		void _clear();
-		void _activateConnection(Host remoteHost, unsigned short remotePort, Host localHost, unsigned short localPort);
+		void _activateConnection(Host remoteHost, unsigned short remotePort, Host localHost, unsigned short localPort) override;
 
 		bool _canSetDestination(State state);
 		bool _canJoinMulticastGroup(State state);

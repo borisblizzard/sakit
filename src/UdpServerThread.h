@@ -38,7 +38,7 @@ namespace sakit
 		harray<hstream*> streams;
 		hmutex streamsMutex;
 
-		void _updateProcess();
+		void _updateProcess() override;
 
 	};
 

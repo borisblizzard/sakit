@@ -38,7 +38,7 @@ namespace sakit
 
 		void _updateBinding();
 		void _updateUnbinding();
-		void _updateProcess();
+		void _updateProcess() override;
 
 	};
 

@@ -39,7 +39,7 @@ namespace sakit
 		harray<TcpSocket*> sockets;
 		hmutex socketsMutex;
 
-		void _updateProcess();
+		void _updateProcess() override;
 
 	};
 

@@ -33,7 +33,7 @@ namespace sakit
 
 		bool isRunning();
 
-		void update(float timeDelta = 0.0f);
+		void update(float timeDelta = 0.0f) override;
 
 		bool startAsync();
 		bool stopAsync();

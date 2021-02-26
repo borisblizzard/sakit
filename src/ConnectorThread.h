@@ -40,7 +40,7 @@ namespace sakit
 
 		void _updateConnecting();
 		void _updateDisconnecting();
-		void _updateProcess();
+		void _updateProcess() override;
 
 	};
 

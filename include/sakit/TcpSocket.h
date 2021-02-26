@@ -35,7 +35,7 @@ namespace sakit
 
 		bool setNagleAlgorithmActive(bool value);
 
-		void update(float timeDelta = 0.0f);
+		void update(float timeDelta = 0.0f) override;
 
 		/// @note Keep in mind that only all queued stream data is received at once.
 		int receive(hstream* stream, int maxCount = 0);
@@ -46,9 +46,9 @@ namespace sakit
 		TcpSocketDelegate* tcpSocketDelegate;
 		TcpReceiverThread* tcpReceiver;
 
-		void _updateReceiving();
+		void _updateReceiving() override;
 
-		void _activateConnection(Host remoteHost, unsigned short remotePort, Host localHost, unsigned short localPort);
+		void _activateConnection(Host remoteHost, unsigned short remotePort, Host localHost, unsigned short localPort) override;
 
 	private:
 		TcpSocket(const TcpSocket& other); // prevents copying

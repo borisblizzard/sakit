@@ -37,7 +37,7 @@ namespace sakit
 		int sentCount;
 		hmutex sentCountMutex;
 
-		void _updateProcess();
+		void _updateProcess() override;
 
 	};
 

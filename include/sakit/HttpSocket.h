@@ -85,7 +85,7 @@ namespace sakit
 		bool isConnected();
 		bool isExecuting();
 
-		void update(float timeDelta = 0.0f);
+		void update(float timeDelta = 0.0f) override;
 
 		bool executeOptions(HttpResponse* response, Url url, chstr customBody = "", hmap<hstr, hstr> customHeaders = hmap<hstr, hstr>());
 		bool executeGet(HttpResponse* response, Url url, chstr customBody = "", hmap<hstr, hstr> customHeaders = hmap<hstr, hstr>());
@@ -144,7 +144,7 @@ namespace sakit
 		bool _executeMethodAsync(chstr method, chstr customBody, hmap<hstr, hstr>& customHeaders);
 		bool _executeMethodInternalAsync(chstr method, Url& url, chstr customBody, hmap<hstr, hstr>& customHeaders);
 
-		int _send(hstream* stream, int count);
+		int _send(hstream* stream, int count) override;
 		bool _sendAsync(hstream* stream, int count);
 		void _terminateConnection();
 

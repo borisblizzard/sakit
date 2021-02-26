@@ -37,7 +37,7 @@ namespace sakit
 		bool isSending();
 		bool isReceiving();
 
-		void update(float timeDelta);
+		void update(float timeDelta) override;
 
 		int send(hstream* stream, int count = INT_MAX);
 		int send(chstr data);
@@ -55,7 +55,7 @@ namespace sakit
 
 		Socket(SocketDelegate* socketDelegate, State idleState);
 
-		int _send(hstream* stream, int count);
+		int _send(hstream* stream, int count) override;
 		bool _prepareReceive(hstream* stream);
 		int _finishReceive(int result);
 		bool _startReceiveAsync(int maxValue);
